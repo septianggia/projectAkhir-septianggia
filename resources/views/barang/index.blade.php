@@ -9,7 +9,7 @@
 @endsection
 
 
-@section('judulh1','Admin - Product')
+@section('judulh1','Admin - Barang')
 
 
 @section('konten')
@@ -22,9 +22,9 @@
 <div class="col-md-12">
     <div class="card card-info">
         <div class="card-header">
-            <h2 class="card-title">Data Customer</h2>
-            <a type="button" class="btn btn-success float-right" href="{{ route('produk.create') }}">
-                <i class=" fas fa-plus"></i> Tambah Product
+            <h2 class="card-title">Data Barang</h2>
+            <a type="button" class="btn btn-success float-right" href="{{ route('barang.create') }}">
+                <i class=" fas fa-plus"></i> Tambah Barang
             </a>
         </div>
         <!-- /.card-header -->
@@ -54,7 +54,7 @@
                         <td>{{ $dt->price }}</td>
                         <td>
                             <div class="btn-group">
-                                <form action="{{ route('produk.destroy',$dt->id)}}" method="POST">
+                                <form action="{{ route('barang.destroy',$dt->id)}}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger">
@@ -65,10 +65,10 @@
                                 </form>
 
 
-                                <a type="button" class="btn btn-warning" href="{{ route('produk.edit',$dt->id) }}">
+                                <a type="button" class="btn btn-warning" href="{{ route('barang.edit',$dt->id) }}">
                                     <i class=" fas fa-edit"></i>
                                 </a>
-                                <a type="button" class="btn btn-success" href="{{ route('produk.show',$dt->id) }}">
+                                <a type="button" class="btn btn-success" href="{{ route('barang.show',$dt->id) }}">
                                     <i class=" fas fa-eye"></i>
                                 </a>
                             </div>

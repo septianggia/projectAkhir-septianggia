@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Barang;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
 class BarangController extends Controller
@@ -15,5 +16,10 @@ class BarangController extends Controller
                 "data"=>$barang
             ]);
         }
-    
+    public function create():View
+    {
+        return view('barang.create')->with([
+            "title" => "Tambah Data Barang"
+        ]);
+    }
 }
