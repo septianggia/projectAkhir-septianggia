@@ -13,12 +13,10 @@ return new class extends Migration
     {
         Schema::create('barangs', function (Blueprint $table) {
             $table->id();
-            $table->string('name_barang');
-            $table->string('keterangan')->nullable();
-            $table->integer('stock');
-            $table->string('status');
-            $table->string('jumlah');
-            $table->date('tgl_peminjaman');      
+            $table->string('name');
+           $table->string('description')->nullable();
+           $table->double('price');
+            $table->string('tgl_peminjaman');      
             $table->timestamps();
            
         });

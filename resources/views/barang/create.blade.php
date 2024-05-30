@@ -38,6 +38,10 @@
                     <input type="number" class="form-control" id="price" name="price">
                 </div>
                 <div class="form-group">
+                    <label for="date">Tanggal Pinjam</label>
+                    <input type="date" class="form-control" id="date" name="tgl_peminjaman">
+                </div>
+                <div class="form-group">
                     <label for="description">Deskripsi</label>
                     <textarea id="description" name="description" class=" form-control" rows="4"></textarea>
                 </div>

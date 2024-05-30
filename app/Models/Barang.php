@@ -9,6 +9,6 @@ use illuminate\Database\Eloquent\Relations\BelongsTo;
 class Barang extends Model
 {
     use HasFactory;
-    protected $fillable=['name','stok','price','description'];
+    protected $fillable=['name','price','description','tgl_peminjaman'];
 
 }

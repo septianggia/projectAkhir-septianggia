@@ -36,9 +36,9 @@
                     <tr>
                         <th>No</th>
                         <th>Nama</th>
-                        <th>Kategori</th>
-                        <th>Stok</th>
                         <th>Harga</th>
+                        <th>Tanggal Pinjam</th>
+                        <th>Deskripsi</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -49,9 +49,10 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $dt->name }}</td>
-                        <td>{{ $dt->category->name }}</td>
-                        <td>{{ $dt->stock }}</td>
-                        <td>{{ $dt->price }}</td>
+                        <td>@money($dt->price)</td>
+                        <td>{{ $dt->tgl_peminjaman }}</td>
+                        <td>{{ $dt->description }}</td>
+                        
                         <td>
                             <div class="btn-group">
                                 <form action="{{ route('barang.destroy',$dt->id)}}" method="POST">
