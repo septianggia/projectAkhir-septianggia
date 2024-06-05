@@ -1,6 +1,5 @@
 @extends('layouts.template')
-@section('judulh1','Admin - Barang')
-
+@section('judulh1','Admin - Peminjam')
 @section('konten')
 <div class="col-md-6">
     @if ($errors->any())
@@ -13,40 +12,33 @@
         </ul>
     </div>
     @endif
-
     <div class="card card-success">
         <div class="card-header">
-            <h3 class="card-title">Tambah Data Barang</h3>
+            <h3 class="card-title">Tambah Data Peminjam</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form action="{{ route('barang.store') }}" method="POST">
+        <form action="{{ route('pelanggan.store') }}" method="POST">
             @csrf
-
-
             <div class=" card-body">
                 <div class="form-group">
-                    <label for="name">Nama Barang</label>
+                    <label for="name">Nama Pelanggan</label>
                     <input type="text" class="form-control" id="name" name="name" placeholder="">
                 </div>
-                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email">
                 </div>
                 <div class="form-group">
-                    <label for="price">Harga</label>
-                    <input type="number" class="form-control" id="price" name="price">
+                    <label for="phone">No Telepon</label>
+                    <input type="text" class="form-control" id="phone" name="phone">
                 </div>
                 <div class="form-group">
-                    <label for="date">Tanggal Pinjam</label>
-                    <input type="date" class="form-control" id="date" name="tgl_peminjaman">
-                </div>
-                <div class="form-group">
-                    <label for="description">Deskripsi</label>
-                    <textarea id="description" name="description" class=" form-control" rows="4"></textarea>
+                    <label for="address">Alamat</label>
+                    <textarea id="address" name="address" class=" form-control" rows="4"></textarea>
                 </div>
             </div>
             <!-- /.card-body -->
-
-
             <div class="card-footer">
                 <button type="submit" class="btn btn-success float-right">Simpan</button>
             </div>

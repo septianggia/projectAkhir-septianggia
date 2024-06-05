@@ -15,15 +15,11 @@
     </div>
     @endif
 
-
     <div class="card card-primary">
         <div class="card-header">
             <h3 class="card-title">Data Barang</h3>
         </div>
         <!-- /.card-header -->
-
-
-
 
         <div class=" card-body">
             <table>
@@ -49,8 +45,6 @@
             </table>
         </div>
         <!-- /.card-body -->
-
-
     </div>
 </div>
 @endsection

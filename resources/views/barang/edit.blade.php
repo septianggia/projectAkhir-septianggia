@@ -1,7 +1,6 @@
 @extends('layouts.template')
 @section('judulh1','Admin - Product')
 
-
 @section('konten')
 <div class="col-md-6">
     @if ($errors->any())
@@ -14,8 +13,6 @@
         </ul>
     </div>
     @endif
-
-
     <div class="card card-warning">
         <div class="card-header">
             <h3 class="card-title">Ubah Data Barang</h3>
@@ -34,11 +31,11 @@
                 </div>
                 <div class="form-group">
                     <label for="tgl_peminjaman">Tanggal Pinjam</label>
-                    <input type="date" class="form-control" id="tgl_peminjaman" name="tgl_peminjaman" value="{{$barang->tgl_peminjaman}}">
+ <input type="date" class="form-control" id="tgl_peminjaman" name="tgl_peminjaman" value="{{$barang->tgl_peminjaman}}">
                 </div>
                 <div class="form-group">
                     <label for="price">Harga</label>
-                    <input type="number" class="form-control" id="price" name="price" value="{{$barang->price}}">
+<input type="number" class="form-control" id="price" name="price" value="{{$barang->price}}">
                 </div>
                 
                 <div class=" form-group">
@@ -56,12 +53,6 @@
         </form>
     </div>
 
-
-
-
 </div>
-
-
-
 
 @endsection
